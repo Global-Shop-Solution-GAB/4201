@@ -1,0 +1,177 @@
+<html>
+<head>
+<title>Purchase Order from {{Company_Name}}</title>
+</head>
+<body>
+<h2 align="center">
+<strong>Purchase Order from {{Company_Name}}<br>
+for Vendor {{Vendor_Name}}</strong></h2>
+<table border="0" align="center"><br>
+<tr>
+<td>
+<font color="#0000FF"><strong>PO #</strong></font></td>
+<td>{{PO_Number}}&nbsp;{{PO_Seq}}</td>
+</tr>
+<tr>
+<td>
+<font color="#0000FF"><strong>PO Date:&nbsp;</strong></font>
+</td>
+<td>{{PO_Date}}</td>
+</tr>
+<tr>
+<td>
+<font color="#0000FF"><strong>Buyer:&nbsp;</strong></font>
+</td>
+<td>{{Buyer}}</td>
+</tr>
+<tr>
+<td>
+<font color="#0000FF"><strong>Ship Via:&nbsp;</strong></font>
+</td>
+<td>{{Ship_Via}}</td>
+</tr>
+<tr>
+<td>
+<font color="#0000FF"><strong>F.O.B.:&nbsp;</strong></font>
+</td>
+<td>{{FOB}}</td><td width="19"></td>
+<td>
+<font color="#0000FF"><strong>Taxable:&nbsp;</strong></font>
+</td>
+<td>{{Taxable}}</td>
+</tr>
+<tr>
+<td>
+<font color="#0000FF"><strong>Terms:</strong></font>
+</td>
+<td>{{Terms}}</td>
+<td width="19"></td>
+<td>
+<font color="#0000FF"><strong>Certs Required:&nbsp;</strong></font>
+</td>
+<td>{{Certs}}</td>
+</tr>
+<tr>
+<td valign="top" >
+<font color="#0000FF"><strong>Vendor:&nbsp;</strong></font>
+</td>
+<td valign="top">{{Buy_Name}}
+<br>{{Buy_Address1}}
+<br>{{Buy_Address2}}
+<br>{{Buy_Address3}}
+<div Style="display:{{Buyer_International}}">
+{{Buy_Address4}}
+<br>{{Buy_Address5}}
+</div>
+<div Style="display:{{Buyer_Local}}">
+{{Buy_City}}&nbsp;&nbsp;{{Buy_State}}&nbsp;&nbsp;{{Buy_Zip}}
+</div>
+{{Buy_Country}}</td>
+<td width="20"></td>
+<td valign="top">
+<font color="#0000FF"><strong>Ship to:&nbsp;</strong></font>
+</td>
+<td valign="top">{{Ship_Name}}
+<br>{{Ship_Address1}}
+<br>{{Ship_Address2}}
+<br>{{Ship_Address3}}
+<div Style="display:{{Ship_International}}">
+{{Ship_Address4}}
+<br>{{Ship_Address5}}
+</div>
+<div Style="display:{{Ship_Local}}">
+{{Ship_City}}&nbsp;&nbsp;{{Ship_State}}&nbsp;&nbsp;{{Ship_Zip}}
+</div>
+{{Ship_Country}}</td>
+<tr>
+<td valign="top">
+<font color="#0000FF"><strong>Attn:&nbsp;&nbsp;</strong></font></td>
+<td>{{Buy_Attn}}</td>
+<td width="20"></td>
+<td valign="top">
+<font color="#0000FF"><strong>Attn:&nbsp;&nbsp;</strong></font>
+</td>
+<td>{{Ship_Attn}}</td>
+</tr>
+</table>
+<br>
+<table border="1" Align="center">
+<tr>
+<td align="center" bgcolor="#0000FF"><font color="#FFFFFF">
+<strong><font size=-1>Line #</font></strong></font>
+</td>
+<td align="center" bgcolor="#0000FF"><font color="#FFFFFF">
+<strong><font size=-1>Part</font></strong></font>
+</td>
+<td align="center" bgcolor="#0000FF"><font color="#FFFFFF">
+<strong><font size=-1>Rev</font></strong></font>
+</td>
+<td align="center" bgcolor="#0000FF"><font color="#FFFFFF">
+<strong><font size=-1>Loc</font></strong></font>
+</td>
+<td align="center" bgcolor="#0000FF"><font color="#FFFFFF">
+<strong><font size=-1>UM</font></strong></font>
+</td>
+<td align="center" bgcolor="#0000FF"><font color="#FFFFFF">
+<strong><font size=-1>Part Description</font></strong></font>
+</td>
+<td align="center" bgcolor="#0000FF"><font color="#FFFFFF">
+<strong><font size=-1>Qty<br>Ordered</font></strong></font>
+</td>
+<td align="center" bgcolor="#0000FF"><font color="#FFFFFF">
+<strong><font size=-1>Unit<br>Price ($)</font></strong></font>
+</td>
+<td align="center" bgcolor="#0000FF"><font color="#FFFFFF">
+<strong><font size=-1>Extended<br>Price ($)</font></strong></font>
+</td>
+<td align="center" bgcolor="#0000FF"><font color="#FFFFFF">
+<strong><font size=-1>Due<br>Date</font></strong></font>
+</td>
+<td align="center" bgcolor="#0000FF"><font color="#FFFFFF">
+<strong><font size=-1>Blanket<br>PO</font></strong></font>
+</td>
+</tr>
+{{BREAK}}
+<tr>
+<td><font size=-1>{{Line_No}}</font></td>
+<td nowrap><font size=-1>{{Part}}</font></td>
+<td><font size=-1>{{Rev}}</font></td>
+<td><font size=-1>{{Loc}}</font></td>
+<td><font size=-1>{{UM}}</font></td>
+<td nowrap><font size=-1>{{Description}}</font></td>
+<td align="right"><font size=-1>
+    {{Qty_Ordered}}</font></td>
+<td align="right"><font size=-1>
+         {{Unit_Price}}</font></td>
+<td align="right"><font size=-1>{{Extended_Price}}</font></td>
+<td><font size=-1>{{Due_Date}}</font></td>
+<td><font size=-1>{{Blanket_PO}}</font></td>
+</tr>
+{{BREAK}}
+<tr>
+<td><font size=-1>&nbsp;</font></td>
+<td nowrap><font size=-1>&nbsp;</font></td>
+<td><font size=-1>&nbsp;</font></td>
+<td><font size=-1>&nbsp;</font></td>
+<td><font size=-1>&nbsp;</font></td>
+<td nowrap><font size=-1>{{Ext_Description}}</font></td>
+<td align="right"><font size=-1>
+    &nbsp;</font></td>
+<td align="right"><font size=-1>
+         &nbsp;</font></td>
+<td align="right"><font size=-1>&nbsp;</font></td>
+<td><font size=-1>&nbsp;</font></td>
+<td><font size=-1>&nbsp;</font></td>
+</tr>
+{{BREAK}}
+<tr>
+<td colspan="8">
+<strong><font size=-1>Total ($)</font></strong></td>
+<td align="right"><font size=-1>{{Total}}</font></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+{{BREAK}}
+</table>
+</body>
+</html>
